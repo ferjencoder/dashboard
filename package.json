@@ -1,0 +1,12 @@
+{
+  "name": "dashboard",
+  "version": "1.0.0",
+  "description": "dashboard app",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon weather.js"
+  },
+  "keywords": [],
+  "author": "ferJen",
+  "license": "ISC"
+}

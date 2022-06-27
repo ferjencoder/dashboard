@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="./img/zanahoria.png" type="image/x-icon" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Dashboard app || ferJen</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark bg-dark bg-opacity-75 fixed-top mb-5">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">🌞 Weather</a>
+        <button class="navbar-toggler rounded-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body bg-dark">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Dropdown </a>
+                <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-5 p-4"></div>
+    <section class="container mt-5 start-50 bg-black bg-opacity-50 text-white p-4" style="width: 500px">
+      <h1 class="h3 pb-4 text-uppercase">Set up your wheather report</h1>
+      <form class="row d-flex flex-column g-2" action="/" method="post">
+        <div class="input-group mb-1">
+          <span class="input-group-text rounded-0 shadow-none text-uppercase border-0" id="cityInput"><small>City Name </small></span>
+          <input type="text" name="cityName" class="form-control rounded-0 shadow-none border-0" placeholder="City Name" />
+        </div>
+        <div class="input-group mb-1">
+          <span class="input-group-text rounded-0 shadow-none text-uppercase border-0" id="langInput"><small>Language </small></span>
+          <input type="text" name="langName" class="form-control rounded-0 shadow-none border-0" placeholder="es, en, fr, " />
+        </div>
+        <div class="input-group mb-1">
+          <span class="input-group-text rounded-0 shadow-none text-uppercase border-0" id="unitInput"><small>Units </small></span>
+          <input type="text" name="unitsName" class="form-control rounded-0 shadow-none border-0" placeholder="standard, metric or imperial" />
+        </div>
+        <div class="col-auto mt-3">
+          <button type="submit" class="btn btn-light rounded-0 mb-1 text-uppercase float-end shadow-none"><small>🌞 get report </small></button>
+        </div>
+      </form>
+    </section>
+    <video id="videoBkg" class="top-0 m-0 p-0 position-fixed" autoplay muted loop>
+      <source src="./vid/rain-tea.mp4" type="video/mp4" />
+    </video>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="weather.js"></script>
+  </body>
+</html>
