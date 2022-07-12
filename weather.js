@@ -9,8 +9,8 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/", function (req, res) {
-  res.sendFile(__dirname + "/index.html");
+app.get("/weather", function (req, res) {
+  res.sendFile(__dirname + "/weather.html");
 });
 app.post("/", function (req, res) {
   const query = req.body.cityName;
